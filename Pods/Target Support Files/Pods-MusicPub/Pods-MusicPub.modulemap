@@ -1,0 +1,6 @@
+framework module Pods_MusicPub {
+  umbrella header "Pods-MusicPub-umbrella.h"
+
+  export *
+  module * { export * }
+}

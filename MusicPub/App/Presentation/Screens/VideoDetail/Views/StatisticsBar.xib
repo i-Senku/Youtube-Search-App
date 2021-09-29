@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatisticsBar" customModule="MusicPub" customModuleProvider="target">
+            <connections>
+                <outlet property="commentsCount" destination="58I-1j-m3U" id="ZBq-Em-cg2"/>
+                <outlet property="dislikesCount" destination="mxd-xe-mgR" id="JYg-JG-gJo"/>
+                <outlet property="likesCount" destination="Y1w-V8-iOF" id="5Cn-PE-GfU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="763" height="179"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="7g1-nE-qf0">
+                    <rect key="frame" x="16" y="60" width="731" height="50"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OB0-Ud-OZo">
+                            <rect key="frame" x="0.0" y="0.0" width="228.5" height="50"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.thumbsup" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YqH-LC-uXQ">
+                                    <rect key="frame" x="99" y="-1" width="30" height="31"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="OYb-b2-q47"/>
+                                        <constraint firstAttribute="width" constant="30" id="hUy-oZ-V7X"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1w-V8-iOF">
+                                    <rect key="frame" x="96.5" y="38" width="35" height="12"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j36-dv-1xD">
+                            <rect key="frame" x="251.5" y="0.0" width="228" height="50"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.thumbsdown" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9Mf-6S-p6r">
+                                    <rect key="frame" x="99" y="0.5" width="30" height="31"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="NRA-kY-sT7"/>
+                                        <constraint firstAttribute="width" constant="30" id="f9a-dI-IDd"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dislikes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxd-xe-mgR">
+                                    <rect key="frame" x="88" y="38" width="52.5" height="12"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hcV-Od-LRi">
+                            <rect key="frame" x="502.5" y="0.0" width="228.5" height="50"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paperplane" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nT8-Py-wAl">
+                                    <rect key="frame" x="99.5" y="0.5" width="30" height="29.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="F7y-fS-Cxg"/>
+                                        <constraint firstAttribute="height" constant="30" id="IXg-zl-6Rh"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58I-1j-m3U">
+                                    <rect key="frame" x="78" y="38" width="73" height="12"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="bPj-4l-yVp"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="7g1-nE-qf0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="1wt-Ia-tUJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7g1-nE-qf0" secondAttribute="trailing" constant="16" id="tuq-T6-D5U"/>
+                <constraint firstItem="7g1-nE-qf0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="uDS-lj-FVC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="326.81159420289856" y="-200.55803571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="hand.thumbsdown" catalog="system" width="128" height="128"/>
+        <image name="hand.thumbsup" catalog="system" width="128" height="128"/>
+        <image name="paperplane" catalog="system" width="128" height="118"/>
+    </resources>
+</document>

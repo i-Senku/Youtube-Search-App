@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HUQ-ia-Cmr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="VideoDetailVC" id="Y6W-OH-hqX" customClass="VideoDetailVC" customModule="MusicPub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jI-pZ-za4" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="448"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQq-w7-XcU" customClass="StatisticsBar" customModule="MusicPub" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="536" width="414" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="L3x-60-Zp8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gQq-w7-XcU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2Lq-WG-gUM"/>
+                            <constraint firstItem="7jI-pZ-za4" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="3A7-A1-i9a"/>
+                            <constraint firstItem="gQq-w7-XcU" firstAttribute="top" secondItem="7jI-pZ-za4" secondAttribute="bottom" id="7Uw-fs-3OU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gQq-w7-XcU" secondAttribute="trailing" id="R9H-t2-QdO"/>
+                            <constraint firstItem="7jI-pZ-za4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ahz-eH-QRN"/>
+                            <constraint firstItem="7jI-pZ-za4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="dj5-w5-5PJ"/>
+                            <constraint firstItem="7jI-pZ-za4" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="mjK-Gb-Kkq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Video" largeTitleDisplayMode="never" id="Xts-sh-L7Y">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="ellipsis" catalog="system" id="rSv-0A-V1j">
+                            <connections>
+                                <action selector="showMenu:" destination="Y6W-OH-hqX" id="sja-ZB-cvt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="statisticsBar" destination="gQq-w7-XcU" id="Mnd-qE-oyu"/>
+                        <outlet property="youtubePlayer" destination="7jI-pZ-za4" id="Q0q-f7-fUR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008.6956521739131" y="87.723214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zXq-jo-Jeh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HUQ-ia-Cmr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eNC-FR-MAx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="49L-kA-3xv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0St-Tu-MNZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98.550724637681171" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

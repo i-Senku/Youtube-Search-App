@@ -1,0 +1,30 @@
+PODS:
+  - Kingfisher (7.0.0)
+  - Realm (10.13.0):
+    - Realm/Headers (= 10.13.0)
+  - Realm/Headers (10.13.0)
+  - RealmSwift (10.13.0):
+    - Realm (= 10.13.0)
+  - youtube-ios-player-helper (1.0.3)
+
+DEPENDENCIES:
+  - Kingfisher (~> 7.0)
+  - RealmSwift
+  - youtube-ios-player-helper
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - Realm
+    - RealmSwift
+    - youtube-ios-player-helper
+
+SPEC CHECKSUMS:
+  Kingfisher: 5efc54fec3980f92354898532e562cc17f31efb4
+  Realm: e3a1225aafa7cec96a020dc199201b9d1f9cd59c
+  RealmSwift: 62585b4a934754a9d9117331689f4e8a5b1f6113
+  youtube-ios-player-helper: 0185c57db23c80d63d6ca11251d110abb8a4ca61
+
+PODFILE CHECKSUM: bfaaa71a771a87ad8091555224b034545859757d
+
+COCOAPODS: 1.11.2
